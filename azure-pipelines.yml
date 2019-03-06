@@ -3,6 +3,7 @@ pool:
 
 variables:
   imageName: 'docker-demo:$(Build.BuildId)'
+  dockerId : 'test'
 
 steps:
 - script: docker build -f DockerDemo/Dockerfile -t $(dockerId).azurecr.io/$(imageName) .
